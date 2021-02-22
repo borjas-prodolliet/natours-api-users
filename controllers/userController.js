@@ -60,9 +60,7 @@ exports.createUser = (req, res) => {
   });
 };
 
-// utilizamos factory aquit tambien
 exports.getUser = factory.getOne(User);
-// utilizamos funciones de getOne y getAll
 exports.getAllUsers = factory.getAll(User);
 exports.updateUser = factory.updateOne(User);
 exports.deleteUser = factory.deleteOne(User);

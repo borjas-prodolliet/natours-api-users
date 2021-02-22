@@ -73,7 +73,6 @@ userSchema.pre(/^find/, function (next) {
   next();
 });
 
-// function for compare the encrypted password with the non encrypted pass
 userSchema.methods.correctPassword = async function (
   candidatePassword,
   userPassword

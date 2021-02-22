@@ -2,7 +2,6 @@ const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
 const APIFeatures = require('../utils/apiFeatures');
 
-// hacemos un metodo abstracto y reutilizable deleteOne
 exports.deleteOne = (Model) =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.findByIdAndDelete(req.params.id);
@@ -47,7 +46,7 @@ exports.createOne = (Model) =>
       },
     });
   });
-// agregamos funcion generica getOne
+
 exports.getOne = (Model, popOptions) =>
   catchAsync(async (req, res, next) => {
     let query = Model.findById(req.params.id);
@@ -65,7 +64,7 @@ exports.getOne = (Model, popOptions) =>
       },
     });
   });
-// agregamos funcion generica getAll
+
 exports.getAll = (Model) =>
   catchAsync(async (req, res, next) => {
     let filter = {};
