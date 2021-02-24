@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: natours-api-users
+spec:
+  selector:
+    app: natours-api-users
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

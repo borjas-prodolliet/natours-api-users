@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: natours-api-users
+  labels:
+    app: natours-api-users
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: natours-api-users
+  template:
+    metadata:
+      labels:
+        app: natours-api-users
+    spec:
+      containers:
+      - name: natours-api-users
+        image: borjasprodolliet/natours-api-users
+        ports:
+        - containerPort: 80
